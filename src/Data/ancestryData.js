@@ -1,7 +1,7 @@
 export const ancestry = [
     {
         'Type': 'Dragonborn',
-        'Sub': 'True'
+        'Sub': ['Brass', 'Bronze', 'Copper', 'Gold', 'Silver']
     },
     {
         'Type': 'Dwarf',

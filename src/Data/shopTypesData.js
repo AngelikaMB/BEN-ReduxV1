@@ -2,6 +2,7 @@
 //Such as Brick & Nails General Store -- this list is the 'General' column.
 
 // merchantClass = {
+//     '0': 'civic/government'
 //     '1': 'blacksmith',
 //     '2': 'armory',
 //     '3': 'apothecary',
@@ -10,9 +11,82 @@
 //     '6': 'inn',
 //     '7': 'blackmarket'
 //     '8': 'foodstuffs'
+//     '9': 'husbandry'
 // }
 
 export const shopTypes = [
+    {
+        'name':'Scrollery',
+        'merchantClass': [5]
+            },
+    {
+        'name':'Trove of Magical Treasures',
+        'merchantClass': [0, 5, 7]
+            },
+    {
+        'name':'Trinkets',
+        'merchantClass': [0, 5]
+            },
+    {
+        'name':'Wonders, Marvels & Wands',
+        'merchantClass': [0, 3, 5, 7]
+            },
+    {
+        'name':'Library',
+        'merchantClass': [0, 3]
+            },
+    {
+        'name':'Brothel',
+        'merchantClass': [0]
+            },
+    {
+        'name':'Bath House',
+        'merchantClass': [0]
+            },
+    {
+        'name':'Parlor',
+        'merchantClass': [0, 3, 5, 6]
+            },
+    {
+        'name':'Barber',
+        'merchantClass': [0]
+            },
+    {
+        'name':'Post Office',
+        'merchantClass': [0]
+            },
+    {
+        'name':'Orphanage',
+        'merchantClass': [0, 5]
+            },
+    {
+        'name':'Stables',
+        'merchantClass': [9]
+            },
+    {
+        'name':'Corral',
+        'merchantClass': [6, 8, 9]
+            },
+    {
+        'name':'Pen',
+        'merchantClass': [6, 8, 9]
+            },
+    {
+        'name':'Hatchery',
+        'merchantClass': [6, 7, 8]
+            },
+    {
+        'name':'Pasture',
+        'merchantClass': [6, 7, 8]
+            },
+    {
+        'name':'Aerie',
+        'merchantClass': [6, 7, 8]
+            },
+    {
+        'name':'Farm',
+        'merchantClass': [6, 7, 8]
+            },
     {
         'name':'Grocery',
         'merchantClass': [6, 7, 8]
@@ -27,7 +101,7 @@ export const shopTypes = [
             },
     {
         'name':'Trade Post',
-        'merchantClass': [5, 6]
+        'merchantClass': [5, 6, 9]
             },
     {
         'name':'Tailor',
@@ -54,12 +128,12 @@ export const shopTypes = [
         'merchantClass': [6, 8]
             },
     {
-        'name':'Butcher',
-        'merchantClass': [6, 7, 8]
+        'name':'Butcher Shop',
+        'merchantClass': [6, 7, 8, 9]
             },
     {
         'name':'Chop Shop',
-        'merchantClass': [6, 7]
+        'merchantClass': [6, 7, 9]
             },
     {
         'name':'Chocolatier',
@@ -95,7 +169,7 @@ export const shopTypes = [
             },
 {
         'name':'Ferrier',
-        'merchantClass': [1, 5]
+        'merchantClass': [1, 5, 9]
             },
 {
         'name':'Fletchers',
