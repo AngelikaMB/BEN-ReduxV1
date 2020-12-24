@@ -16,6 +16,82 @@
 
 export const shopTypes = [
     {
+        'name':'Stand',
+        'merchantClass': [3, 5, 8]
+            },
+                {
+        'name':'Shop',
+        'merchantClass': [1, 2, 3, 4, 5, 7, 8]
+            },
+                {
+        'name':'Store',
+        'merchantClass': [1, 2, 3, 4, 5, 7, 8]
+            },
+                {
+        'name':'Cart',
+        'merchantClass': [1, 2, 3, 5, 8]
+            },
+                {
+        'name':'Caravan',
+        'merchantClass': [0, 5, 7, 9]
+            },
+                {
+        'name':'Stall',
+        'merchantClass': [1, 2, 3, 4, 5, 7, 8]
+            },
+                {
+        'name':'Tent',
+        'merchantClass': [0, 5, 9]
+            },
+                {
+        'name':'Market',
+        'merchantClass': [1, 2, 3, 4, 5, 8, 9]
+            },
+                {
+        'name':'Collective',
+        'merchantClass': [1, 2, 3, 4, 5, 8, 9]
+            },
+                {
+        'name':'Palace',
+        'merchantClass': [0, 6, 8]
+            },
+                {
+        'name':'Garden',
+        'merchantClass': [0, 6, 9]
+            },
+                {
+        'name':'Square',
+        'merchantClass': [0]
+            },
+                {
+        'name':'Castle',
+        'merchantClass': [0]
+            },
+                {
+        'name':'Courtyard',
+        'merchantClass': [0, 6]
+            },
+                {
+        'name':'Court',
+        'merchantClass': [0]
+            },
+                {
+        'name':'Retreat',
+        'merchantClass': [0, 6]
+            },
+                {
+        'name':'Hoard',
+        'merchantClass': [1, 2, 3, 4, 5, 6, 7, 8]
+            },
+                {
+        'name':'Stash',
+        'merchantClass': [7]
+            },
+                {
+        'name':'Club',
+        'merchantClass': [5, 9]
+            },
+    {
         'name':'Scrollery',
         'merchantClass': [5]
             },
