@@ -16,6 +16,90 @@
 
 export const shopTypes = [
     {
+        'name':'Wagon Rental',
+        'merchantClass': [1, 9]
+            },
+    {
+        'name':'Livery Stables',
+        'merchantClass': [9]
+            },
+    {
+        'name':'Wagons & Flagons (DD Required)',
+        'merchantClass': [8, 9]
+            },
+    {
+        'name':'Dock',
+        'merchantClass': [0]
+            },
+    {
+        'name':'Carriages',
+        'merchantClass': [1, 9]
+            },
+    {
+        'name':'Carts',
+        'merchantClass': [1, 9]
+            },
+    {
+        'name':'Point',
+        'merchantClass': [0]
+            },
+    {
+        'name':'Bank',
+        'merchantClass': [0]
+            },
+    {
+        'name':'School',
+        'merchantClass': [0]
+            },
+    {
+        'name':'University',
+        'merchantClass': [0]
+            },
+    {
+        'name':'Museum',
+        'merchantClass': [0]
+            },
+    {
+        'name':'Park',
+        'merchantClass': [0]
+            },
+    {
+        'name':'Carnival',
+        'merchantClass': [0, 8]
+            },
+    {
+        'name':'Tavern',
+        'merchantClass': [6, 8]
+            },
+    {
+        'name':'Inn',
+        'merchantClass': [6, 8]
+            },
+    {
+        'name':'Bed & Breakfast',
+        'merchantClass': [6, 8]
+            },
+    {
+        'name':'Hostel',
+        'merchantClass': [6]
+            },
+    {
+        'name':'Bar',
+        'merchantClass': [8]
+            },
+    {
+        'name':'Bar & Grill',
+        'merchantClass': [8]
+            },
+    {
+        'name':'Pub',
+        'merchantClass': [8]
+            },
+    {
+        'name':'Eatery',
+        'merchantClass': [3, 5, 8]
+            },
+    {
         'name':'Stand',
         'merchantClass': [3, 5, 8]
             },

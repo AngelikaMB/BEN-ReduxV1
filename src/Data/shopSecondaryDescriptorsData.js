@@ -2,12 +2,16 @@
 //Such as Brick & Nails General Store -- this list is the 'Nails' column.
 
 // merchantClass = {
+//     '0': 'civic/government'
 //     '1': 'blacksmith',
 //     '2': 'armory',
 //     '3': 'apothecary',
 //     '4': 'tailor',
 //     '5': 'general',
-//     '6': 'inn'
+//     '6': 'inn',
+//     '7': 'blackmarket'
+//     '8': 'foodstuffs'
+//     '9': 'husbandry'
 // }
 
 export const shopSecondaryDescriptions = [
@@ -29,7 +33,7 @@ export const shopSecondaryDescriptions = [
             },
     {
         'name':'Brick',
-        'merchantClass': [5,6]
+        'merchantClass': [5,6, 9]
             },
     {
         'name':'Iron',
