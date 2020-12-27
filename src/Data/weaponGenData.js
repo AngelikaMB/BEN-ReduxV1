@@ -1,4 +1,4 @@
-export const weaponGenData = [
+export const weaponData = [
    {
         'id': 1,
         'source': 'SRD',

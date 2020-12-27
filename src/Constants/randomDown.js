@@ -1,4 +1,4 @@
 
 export const randomDown = (array) => {
-Math.floor(Math.random() * array.length)
+return Math.floor(Math.random() * array.length)
 }

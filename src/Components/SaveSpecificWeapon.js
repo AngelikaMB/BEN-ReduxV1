@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import { toggleEditing, updateName } from '../Actions/specificWeapon'
+import { updateName } from '../Actions/specificWeapon'
 import { connect } from 'react-redux'
 
 
 //Slice of state
-
 
 //Each generated weapon would need a unique ID.
 //if the user saves the weapon, all available information related to that id gets pushed to state
@@ -20,45 +19,46 @@ const SaveSpecificWeapon = props => {
 
 const [newWeaponName, setNewWeaponName] = useState(initialState)
 
- const handleChanges = e => {
-     setNewWeaponName(e.target.value)
- }
+ const handleChanges = e => ({
+     [e.target.name]: e.target.value
+ })
 
+console.log(newWeaponName)
     return(
 
 
     <div>
-            
-        <label>Weapon Name: </label>
+            {props.name.map((weapon, id) => (
+                <div key={id}>
+                <h3 >{weapon.name}</h3>
+                <p>{weapon.size}</p>
+
+        <label>Edit Weapon Name: </label>
             
         <div>
-            {newWeaponName === initialState ? ( 
             <input 
             type='text'
-            placeholder='Weapon Name'
-            value=''
+            placeholder={weapon.name}
+            value={newWeaponName.name}
             onChange={handleChanges}
             />
 
-        ) : (
-             <input 
-        type='text'
-        placeholder='Weapon Name'
-        value={newWeaponName}
-        onChange={handleChanges}
-        />
-        )}
         <button onClick={() => props.updateName(newWeaponName)}>Save</button>
         </div>
+        </div>
+        ))}
+        
     </div>
     )
 }
 
+
+//This is mapping a brand new object, not editing an existing object already in state.
+
 const mapStateToProps = state => {
     return {
-    name: state.specificWeaponReducer.name,
-    editing: state.specificWeaponReducer.editing
+    name: state.specificWeaponReducer.inventoryWeaponArray
     }
 }
 
-export default connect(mapStateToProps, {toggleEditing, updateName})(SaveSpecificWeapon)
+export default connect(mapStateToProps, {updateName})(SaveSpecificWeapon)

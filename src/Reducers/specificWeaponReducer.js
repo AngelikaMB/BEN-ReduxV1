@@ -1,27 +1,29 @@
-import { ADD_NEW_WEAPON, TOGGLE_EDITING, UPDATED_NAME } from '../Actions/specificWeapon'
+import { ADD_NEW_WEAPON, UPDATED_NAME, TOGGLE_EDITING } from '../Actions/specificWeapon'
 
 export const initialWeaponState = {
-    weaponArray: [],
-    name: '',
-    editing: false,
-    id: 0,
-    cost: 0,
-    enchanted: false,
-    enchantDesc: '',
-    material: '',
-    size: '',
-    type: '',
-    proficiency: '',
-    numOfDie: 0,
-    dieSize: 0,
-    damageType: '',
-    range: false,
-    ammunition: '',
-    conversion: '',
-    details: '',
-    misc: '',
-    weight: 0,
-    rarity: 0,
+    inventoryWeaponArray: [{
+        name: '',
+        editing: false,
+        id: 0,
+        cost: 0,
+        enchanted: false,
+        enchantDesc: '',
+        material: '',
+        size: '',
+        type: '',
+        proficiency: '',
+        numOfDie: 0,
+        dieSize: 0,
+        damageType: '',
+        range: false,
+        ammunition: '',
+        conversion: '',
+        details: '',
+        misc: '',
+        weight: 0,
+        rarity: 0,
+    }],
+
 }
 
 export const specificWeaponReducer = (state = initialWeaponState, action) => {
@@ -29,6 +31,9 @@ export const specificWeaponReducer = (state = initialWeaponState, action) => {
             case(ADD_NEW_WEAPON):
                 return({
                     ...state,
+                    inventoryWeaponArray: [
+                            ...state.inventoryWeaponArray, 
+                            {
                             id: Date.now(),
                             cost: action.payload.cost,
                             enchanted: action.payload.enchanted,
@@ -47,18 +52,18 @@ export const specificWeaponReducer = (state = initialWeaponState, action) => {
                             misc: action.payload.misc,
                             weight: action.payload.weight,
                             rarity: action.payload.rarity,
+                                            }]
                         })
             case(UPDATED_NAME):
                 return ({
                     ...state,
-                    name: action.payload,
-                    editing: false
+                    inventoryWeaponArray: [...state.inventoryWeaponArray, {name: action.payload}]
                     })
             case(TOGGLE_EDITING):
                 return ({
                     ...state,
-                    editing: !state.editing
-                    })
+                    inventoryWeaponArray: [...state.inventoryWeaponArray, {editing: true}]
+                })   
                 default:
                 return state;
             }

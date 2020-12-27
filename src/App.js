@@ -1,11 +1,11 @@
 import React from 'react'
-import SaveSpecificWeapon from './Components/SaveSpecificWeapon'
+import WeaponGenWrapper from './Components/WeaponGenWrapper'
 import './CSS/App.css';
 
 function App() {
   return (
     <div className="App">
-    <SaveSpecificWeapon/>
+    <WeaponGenWrapper />
     </div>
   );
 }
