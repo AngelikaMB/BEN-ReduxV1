@@ -26,29 +26,31 @@ const [newWeaponName, setNewWeaponName] = useState(initialState)
 
     return(
 
-    //     <div>
-    //     {!props.editing ? (
-    //         <h3>{props.name}{' '}
-    //         <i className="far fa-edit"
-    //             onClick={() => props.toggleEditing()}
-    //             />
-    //         </h3>
 
-    // ) : (
-
-        <div>
+    <div>
+            
         <label>Weapon Name: </label>
-        <input 
+            
+        <div>
+            {newWeaponName === initialState ? ( 
+            <input 
+            type='text'
+            placeholder='Weapon Name'
+            value=''
+            onChange={handleChanges}
+            />
+
+        ) : (
+             <input 
         type='text'
         placeholder='Weapon Name'
-        value={newWeaponName.name}
+        value={newWeaponName}
         onChange={handleChanges}
         />
-        <button onClick={() => 
-        props.updateName(newWeaponName)}>Save</button>
+        )}
+        <button onClick={() => props.updateName(newWeaponName)}>Save</button>
         </div>
-       //)}
-        //</div>
+    </div>
     )
 }
 
