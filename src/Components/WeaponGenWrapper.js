@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
-//import WeaponGenMain from './WeaponGenMain'
+import WeaponGenMain from './WeaponGenMain'
 import { addNewWeapon } from '../Actions/specificWeapon'
 import { randomDown } from '../Constants/randomDown'
 import { weaponData } from '../Data/weaponGenData'
 import { brandData } from '../Data/brandData'
-import WeaponGenMain from './WeaponGenMain'
 //import { connect } from 'react-redux'
 
 const initialState = []
@@ -35,21 +34,12 @@ useEffect(() => {
     newWeapons()
 }, [])
 
-
-console.log(newWeapon)
-
     return(
 
 
         <div>
-
-        <label>Edit Weapon Name: </label>
-            
         {newWeapon.map(weapon => (
-            <div key={weapon.id}>
-            <h3>{weapon.name}</h3>
-            <p>{weapon.type}</p>
-            </div>
+            <WeaponGenMain key={weapon.id} weapon={weapon} brand={brandID}/>
         ))}
 
 

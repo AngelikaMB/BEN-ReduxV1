@@ -16,6 +16,7 @@ const initialState = {
 }
 
 const SaveSpecificWeapon = props => {
+const { weaponName } = props
 
 const [newWeaponName, setNewWeaponName] = useState(initialState)
 
@@ -23,7 +24,6 @@ const [newWeaponName, setNewWeaponName] = useState(initialState)
      [e.target.name]: e.target.value
  })
 
-console.log(newWeaponName)
     return(
 
 
@@ -33,17 +33,16 @@ console.log(newWeaponName)
                 <h3 >{weapon.name}</h3>
                 <p>{weapon.size}</p>
 
-        <label>Edit Weapon Name: </label>
-            
         <div>
+        <label>Edit Weapon Name: </label>
             <input 
             type='text'
             placeholder={weapon.name}
-            value={newWeaponName.name}
+            value={weaponName}
             onChange={handleChanges}
             />
 
-        <button onClick={() => props.updateName(newWeaponName)}>Save</button>
+        <button className='saveButton' onClick={() => props.updateName(newWeaponName)}>Save</button>
         </div>
         </div>
         ))}

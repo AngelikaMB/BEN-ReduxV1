@@ -14,12 +14,12 @@ export const theme = {
     },
 
     colors: {
-        primary: '#de9391',
-        background: '#28343D',
-        border: '#a4bbc8',
-        button: '#455b71',
-        text: '#fcd1b5',
-        secondary: '#96759a',
+        primary: '#853AFF',
+        background: '#FBFBFB',
+        border: '#853AFF',
+        button: '#853AFF',
+        text: '#343434',
+        secondary: '#853AFF',
     },
 
     text: {
@@ -53,7 +53,7 @@ export const theme = {
 
     border: {
         size: '4px',
-        style: 'double',
+        style: 'solid',
         circular: '50%',
         rounded: '15px',
     },
