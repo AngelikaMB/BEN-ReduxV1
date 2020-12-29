@@ -1,25 +1,25 @@
 import stringMath from '../Constants/stringMath'
 
-export const dieSize = function (props) {
-  const dieSizeSetUp = props.weaponData.dieSize+props.brand.dieSizeMod+props.brand.dieSizeModNum
+export const dieSize = function (dieSize, dieSizeMod, dieSizeModNum) {
+  const dieSizeSetUp = dieSize+dieSizeMod+dieSizeModNum
   const dieCalc = stringMath(dieSizeSetUp)
   return(dieCalc)
 }
 
-export function dieNum(props) {
-  const dieNumSetUp = props.weaponData.numOfDie+props.brand.dieNumMod
+export function dieNum(numOfDie, dieNumMod) {
+  const dieNumSetUp = numOfDie+dieNumMod
   const dieNumCalc = stringMath(dieNumSetUp)
   return (dieNumCalc)
 }
 
-export function conversionDieSize(props) {
-  const conversionSetUp = props.weaponData.conversionDieSize+props.brand.dieSizeMod+props.brand.dieSizeModNum
+export function conversionDieSize(conversionDieSize, dieSizeMod, dieSizeModNum) {
+  const conversionSetUp = conversionDieSize+dieSizeMod+dieSizeModNum
   const conversionCalc = stringMath(conversionSetUp)
   return (conversionCalc)
 }
 
-export function conversionDieNum(props) {
-  const conversionDieSetUp = props.weaponData.conversionNumOfDie+props.brand.dieNumMod
+export function conversionDieNum(conversionNumOfDie, dieNumMod) {
+  const conversionDieSetUp = conversionNumOfDie+dieNumMod
   const conversionDieCalc = stringMath(conversionDieSetUp)
-  return conversionDieCalc
+  return (conversionDieCalc)
 }

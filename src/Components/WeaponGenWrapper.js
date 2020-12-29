@@ -28,11 +28,14 @@ const initialState = []
 
 const WeaponGenWrapper = () => {
 const [newWeapon, setNewWeapon] = useState(initialState)
-const brandID = randomDown(brandData)
 
+//randomzing an index from the brandData array and returning that brand object
+const brandID = brandData[randomDown(brandData)]
+
+//retrieving selected number of random weapon objects
 const newWeapons = () => {
     const newWeaponArray = []
-    for(let i = 0; i < 15 ; i++) {
+    for(let i = 0; i < 12 ; i++) {
     let key = randomDown(weaponData)
     const generatedWeapon = weaponData[key]
     const newWeapons = generatedWeapon

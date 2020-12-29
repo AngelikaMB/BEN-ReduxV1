@@ -14,7 +14,7 @@ export const theme = {
     },
 
     colors: {
-        primary: '#853AFF',
+        primary: '#b200fd',
         background: '#FBFBFB',
         border: '#853AFF',
         button: '#853AFF',
@@ -52,7 +52,7 @@ export const theme = {
      },
 
     border: {
-        size: '4px',
+        size: '2px',
         style: 'solid',
         circular: '50%',
         rounded: '15px',

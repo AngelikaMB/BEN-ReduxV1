@@ -5,7 +5,7 @@
 
 h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
-  color: #9D66F8;
+  color: #b200fd;
 }
 
 a, p {
@@ -39,4 +39,8 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+.saveButton {
+  z-index: 2;
 }

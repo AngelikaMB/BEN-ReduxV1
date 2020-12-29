@@ -12,7 +12,6 @@ const EditableTitle = styled.div`
     align-items: center;
 `
 
-
 //Slice of state
 
 //Each generated weapon would need a unique ID.
@@ -49,8 +48,9 @@ const [newWeaponName, setNewWeaponName] = useState(initialState)
             value={weaponName}
             onChange={handleChanges}
             />
-
-        <button className='saveButton' onClick={() => props.updateName(newWeaponName)}>-- R E N A M E --</button>
+        
+        <button className='saveButton' onClick={() => props.updateName
+        (newWeaponName)}>-- R E N A M E --</button>
         </EditableTitle>
         </div>
         ))}
