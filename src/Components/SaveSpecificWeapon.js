@@ -1,6 +1,16 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
 import { updateName } from '../Actions/specificWeapon'
 import { connect } from 'react-redux'
+
+//Styles
+
+const EditableTitle = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
 
 
 //Slice of state
@@ -25,15 +35,13 @@ const [newWeaponName, setNewWeaponName] = useState(initialState)
  })
 
     return(
-
-
     <div>
-            {props.name.map((weapon, id) => (
-                <div key={id}>
+            {props.name.map((weapon) => (
+                <div key={Date.now()}>
                 <h3 >{weapon.name}</h3>
                 <p>{weapon.size}</p>
 
-        <div>
+        <EditableTitle>
         <label>Edit Weapon Name: </label>
             <input 
             type='text'
@@ -42,8 +50,8 @@ const [newWeaponName, setNewWeaponName] = useState(initialState)
             onChange={handleChanges}
             />
 
-        <button className='saveButton' onClick={() => props.updateName(newWeaponName)}>Save</button>
-        </div>
+        <button className='saveButton' onClick={() => props.updateName(newWeaponName)}>-- R E N A M E --</button>
+        </EditableTitle>
         </div>
         ))}
         
