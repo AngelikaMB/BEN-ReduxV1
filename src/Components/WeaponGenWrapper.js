@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import WeaponGenMain from './WeaponGenMain'
-import { addNewWeapon } from '../Actions/specificWeapon'
 import { randomDown } from '../Constants/randomDown'
 import { weaponData } from '../Data/weaponGenData'
 import { brandData } from '../Data/brandData'
 import styled from 'styled-components'
-//import { connect } from 'react-redux'
 
 //Styles
 
@@ -28,26 +26,38 @@ const initialState = []
 
 const WeaponGenWrapper = () => {
 const [newWeapon, setNewWeapon] = useState(initialState)
-
-//randomzing an index from the brandData array and returning that brand object
-const brandID = brandData[randomDown(brandData)]
+const [newBrand, setNewBrand] = useState(initialState)
 
 //retrieving selected number of random weapon objects
 const newWeapons = () => {
     const newWeaponArray = []
-    for(let i = 0; i < 12 ; i++) {
+    //for loop dictates how many weapons to retrieve
+    for(let i = 0; i < 3 ; i++) {
+    //generating random index
     let key = randomDown(weaponData)
+    //selecting weapon object by index
     const generatedWeapon = weaponData[key]
-    const newWeapons = generatedWeapon
-    
-
-    newWeaponArray.push(newWeapons)
+     //pushing weapon objects to array
+    newWeaponArray.push(generatedWeapon)
     }
+    //saving weapon array to component state
     setNewWeapon(newWeaponArray)
+}
+
+//Same as above, but for brand objects
+const selectBrand = () => {
+    const newBrandArray = []
+    for(let i = 0; i < 3 ; i++) {
+    let key = randomDown(brandData)
+    const pickBrand = brandData[key]
+    newBrandArray.push(pickBrand)
+    }
+    setNewBrand(newBrandArray)
 }
 
 useEffect(() => {
     newWeapons()
+    selectBrand()
 }, [])
 
     return(
@@ -83,11 +93,12 @@ useEffect(() => {
 
 <CardContainer>
     <CardGrid>
-        {newWeapon.map(weapon => (
-            <WeaponGenMain key={Math.random(weapon.id)} weapon={weapon} brand={brandID}/>
-        ))}
-
-        {/* <WeaponGenMain weaponGen={weaponData[key]} price={weaponData[key].cost}  brand={brandData[brandID]}/> */}
+        {newWeapon.map((weapon, index) => {
+            const weaponBrand = newBrand[index]
+            return (
+                <WeaponGenMain key={Math.random(weapon.id)} weapon={weapon} brand={weaponBrand}/>
+            )
+    })}
 
     </CardGrid>
 </CardContainer>

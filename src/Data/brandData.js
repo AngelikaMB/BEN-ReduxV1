@@ -80,7 +80,7 @@ export const brandData = [
 {
     'name': 'Cursed',
     'description': 'This item is cursed.',
-    'cost': 0,
+    'cost': 10,
     'dieNumMod': '',
     'dieSizeMod': '',
     'dieSizeModNum': '',

@@ -14,6 +14,7 @@ const WeaponCard = styled.div`
     border: ${pr => pr.theme.border.style} ${pr => pr.theme.border.size} ${pr => pr.theme.colors.primary};
     border-radius:  ${pr => pr.theme.border.rounded};
     box-shadow: 10px 10px 8px #f4f4f4;
+    background: linear-gradient(to left, transparent 80%, #00ecfd08), linear-gradient(to right, transparent 80%, #00ecfd08)
 `
 const WeaponHeader = styled.div`
     h2 {
@@ -21,15 +22,15 @@ const WeaponHeader = styled.div`
     }
 `
 const WeaponBrand = styled.div`
-
+    padding: 0 3%;
 `
 
 const WeaponBody = styled.div`
-
+    padding: 0 3%;
 `
 
 const WeaponCurse = styled.div`
-
+    padding: 0 3%;
 `
 const InventoryRuler = styled.div`
         height: 1px;
@@ -47,13 +48,13 @@ return(
             <WeaponHeader>
             <SaveSpecificWeapon weaponName={props.weapon.name}/>
             </WeaponHeader>
-            {props.weapon.brand ? 
+            
+            {props.brand !== {} ? 
             <WeaponBrand>
-            <InventoryRuler />
-            <p>{props.weapon.brand.name}</p>
+            <p>{props.brand.name}</p>
     {/* 
     Kindred = Roll on the brand table again, anything but Kindred. Do not display the name, but pull the modifiers except price which should remain as Kindred. */}
-
+            <InventoryRuler />
             </WeaponBrand>
             : ''}
             <WeaponBody>
