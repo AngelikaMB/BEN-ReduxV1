@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { ReactComponent as GoldCoin } from "../Assets/goldenCoin.svg";
-import { ReactComponent as PlatCoin } from "../Assets/PlatinumCoin.svg";
+import { ReactComponent as PlatCoin } from "../Assets/platinumCoin.svg";
 import { ReactComponent as SilvCoin } from "../Assets/silverCoin.svg";
 import { ReactComponent as CopCoin } from "../Assets/bronzeCoin.svg";
 import styled from "styled-components";
-
-//Just checking that git is still pushing correctly.
 
 //Styles
 const CoinWrapper = styled.div`
@@ -74,7 +72,7 @@ export default function CurrencyConvert(props) {
 		copper: copper,
 	};
 
-	//setting price point object to state
+	//setting price point object to component state
 	useEffect(() => {
 		setCostArray((costArray) => [...costArray, cost]);
 	}, []);
