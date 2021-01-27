@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import { updateName } from '../Actions/specificWeapon'
-import { connect } from 'react-redux'
+import React, { useState } from "react";
+import styled from "styled-components";
+import { updateName } from "../Actions/specificWeapon";
+import { connect } from "react-redux";
 
 //Styles
 
 const EditableTitle = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`;
 
 //Slice of state
 
@@ -21,51 +21,54 @@ const EditableTitle = styled.div`
 //
 
 const initialState = {
-    name: ''
-}
+	name: "",
+};
 
-const SaveSpecificWeapon = props => {
-const { weaponName } = props
+const SaveSpecificWeapon = (props) => {
+	const { weaponName } = props;
 
-const [newWeaponName, setNewWeaponName] = useState(initialState)
+	const [newWeaponName, setNewWeaponName] = useState(initialState);
 
- const handleChanges = e => ({
-     [e.target.name]: e.target.value
- })
+	const handleChanges = (e) => ({
+		[e.target.name]: e.target.value,
+	});
 
-    return(
-    <div>
-            {props.name.map((weapon) => (
-                <div key={Date.now()}>
-                <h3 >{weapon.name}</h3>
-                <p>{weapon.size}</p>
+	return (
+		<div>
+			{props.name.map((weapon) => (
+				<div key={Date.now()}>
+					<h3>{weapon.name}</h3>
+					<p>{weapon.size}</p>
 
-        <EditableTitle>
-        <label>Edit Weapon Name: </label>
-            <input 
-            type='text'
-            placeholder={weapon.name}
-            value={weaponName}
-            onChange={handleChanges}
-            />
-        
-        <button className='saveButton' onClick={() => props.updateName
-        (newWeaponName)}>-- R E N A M E --</button>
-        </EditableTitle>
-        </div>
-        ))}
-        
-    </div>
-    )
-}
+					<EditableTitle>
+						<label>Edit Weapon Name: </label>
+						<input
+							type="text"
+							placeholder={weapon.name}
+							value={weaponName}
+							onChange={handleChanges}
+							className="weapon-input"
+						/>
 
+						<button
+							className="btn rename-btn"
+							onClick={() => props.updateName(newWeaponName)}
+						>
+							-- R E N A M E --
+						</button>
+					</EditableTitle>
+				</div>
+			))}
+		</div>
+	);
+};
 
 //This is mapping a brand new object, not editing an existing object already in state.
 
-const mapStateToProps = state => {
-    return {
-    name: state.specificWeaponReducer.inventoryWeaponArray
-    }
-}
+const mapStateToProps = (state) => {
+	return {
+		name: state.specificWeaponReducer.inventoryWeaponArray,
+	};
+};
 
-export default connect(mapStateToProps, {updateName})(SaveSpecificWeapon)
+export default connect(mapStateToProps, { updateName })(SaveSpecificWeapon);

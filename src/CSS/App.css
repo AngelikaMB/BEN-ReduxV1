@@ -1,46 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
-
-
-h1, h2, h3, h4 {
-  font-family: 'Montserrat', sans-serif;
-  color: #b200fd;
+html {
+	box-sizing: border-box;
 }
 
-a, p {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 500;
-  color: #343434;
+body {
+	margin: 0;
+	box-sizing: inherit;
+	font-size: 62.5%;
 }
 
-input {
-  display: flex;
-  text-align: center;
-  font-size: 1.2em;
-  padding: 4px;
-  background: none;
-  width: 60%;
-  border: none;
-  margin-top: 0;
-  margin-right: 8px;
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Montserrat", sans-serif;
+	color: #b200fd;
 }
 
-button {
-  border-style:hidden;
-  border-color: white;
-  box-shadow: none;
-  padding: 5px 0;
-  color: white;
-  background: linear-gradient(to right, #00ecfd, #b200fd);
-  border-radius: 20px;
-  width: 60%;
+a,
+p {
+	font-family: "Raleway", sans-serif;
+	font-weight: 500;
+	color: #343434;
 }
 
-button:hover {
-  cursor: pointer;
+.weapon-input {
+	display: flex;
+	text-align: center;
+	font-size: 1.6rem;
+	padding: 0.4rem;
+	background: none;
+	width: 60%;
+	border: none;
+	margin-top: 0;
+	margin-right: 0.8rem;
 }
 
-.saveButton {
-  z-index: 2;
+.btn {
+	box-shadow: none;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+.rename-btn {
+	border-radius: 1rem;
+	border-style: hidden;
+	border-color: white;
+	box-shadow: none;
+	padding: 0.5rem 0;
+	color: white;
+	background: linear-gradient(to right, #00ecfd, #b200fd);
+	width: 60%;
+	z-index: 2;
 }

@@ -29,8 +29,6 @@ export default function CurrencyConvert(props) {
 	const [costArray, setCostArray] = useState(initialState);
 	const { price, brand } = props;
 
-	console.log(" --> ", price);
-
 	let plat = 0;
 	let gold = 0;
 	let silver = 0;
