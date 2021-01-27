@@ -30,10 +30,14 @@
 .navbar__btn {
 	font-size: 0.8rem;
 	margin: 0.4rem;
-	padding: 1rem;
+	padding: 0.8rem;
 	background-color: #fff;
 	color: #000;
 	border-radius: 1rem;
+}
+
+.form {
+	display: flex;
 }
 
 .form__container {
@@ -46,7 +50,7 @@
 .form__label {
 	display: flex;
 	flex-direction: column;
-	font-size: 1.1rem;
+	font-size: 0.9rem;
 	color: #00ecfd;
 	margin: 0.5rem;
 }
@@ -62,6 +66,9 @@
 	padding: 0.4rem 0;
 }
 
-.form {
-	display: flex;
+.form__input::placeholder {
+	opacity: 0.6;
+	font-size: 0.9rem;
 }
+
+/* Animations */

@@ -24,7 +24,7 @@ export default function SignUpForm() {
 					<input
 						name="username"
 						type="text"
-						placeholder="enter your username"
+						placeholder="Enter your username"
 						value={formValues.username}
 						onChange={onChange}
 						className="form__input"
@@ -36,7 +36,7 @@ export default function SignUpForm() {
 					<input
 						name="password"
 						type="text"
-						placeholder="enter your password"
+						placeholder="Enter your password"
 						value={formValues.password}
 						onChange={onChange}
 						className="form__input"
