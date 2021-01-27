@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import WeaponGenWrapper from "./Components/WeaponGenWrapper";
+import WeaponGenWrapper from "./Components/Generators/WeaponGenerator/WeaponGenWrapper";
 import Navbar from "./Components/Navbar/Navbar";
 import Campaign from "./Components/Campaign/Campaign";
 import About from "./Components/About/About";
