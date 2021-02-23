@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { ReactComponent as GoldCoin } from "../Assets/goldenCoin.svg";
-import { ReactComponent as PlatCoin } from "../Assets/platinumCoin.svg";
-import { ReactComponent as SilvCoin } from "../Assets/silverCoin.svg";
-import { ReactComponent as CopCoin } from "../Assets/bronzeCoin.svg";
+// import { ReactComponent as GoldCoin } from "../Assets/goldenCoin.svg";
+// import { ReactComponent as PlatCoin } from "../Assets/platinumCoin.svg";
+// import { ReactComponent as SilvCoin } from "../Assets/silverCoin.svg";
+// import { ReactComponent as CopCoin } from "../Assets/bronzeCoin.svg";
 import styled from "styled-components";
 
 //Styles
@@ -18,10 +18,7 @@ const CoinDisplay = styled.div`
 	align-items: center;
 	margin: 0 10%;
 	padding: 2px;
-
-	h4 {
-		color: white;
-	}
+	color: ${(pr) => pr.theme.colors.secondary};
 `;
 const initialState = [];
 
@@ -82,14 +79,10 @@ export default function CurrencyConvert(props) {
 			) : (
 				costArray.map((price) => (
 					<CoinDisplay key={Math.random(Date.now())}>
-						<PlatCoin width={25} height={25} alt="platinum coin" />
-						<h4>{price.plat}</h4>
-						<GoldCoin width={25} height={25} alt="golden coin" />
-						<h4>{price.gold}</h4>
-						<SilvCoin width={25} height={25} alt="silver coin" />
-						<h4>{price.silver}</h4>
-						<CopCoin width={25} height={25} alt="copper coin" />
-						<h4>{price.copper}</h4>
+						<h3>Platinum: {price.plat}</h3>
+						<h3>Gold: {price.gold}</h3>
+						<h3>Silver: {price.silver}</h3>
+						<h3>Copper: {price.copper}</h3>
 					</CoinDisplay>
 				))
 			)}

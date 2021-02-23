@@ -1,0 +1,114 @@
+.shopkeep__wrapper {
+	margin: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.shopkeep_wrapper--align {
+	padding: 0 10rem;
+	background-color: #fbfbfb;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	border: 2px solid #000;
+	border-radius: 0.5rem;
+}
+
+.shopkeep__info-block {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.3rem;
+	padding-top: 0.6rem;
+	padding-left: 0.6rem;
+	padding-right: 25%;
+	margin: 0 auto;
+}
+
+.shopkeep__info-block__btn {
+	border-radius: 1rem;
+	border-style: hidden;
+	border-color: white;
+	box-shadow: none;
+	padding: 0.5rem 0;
+	color: white;
+	background: linear-gradient(to right, #00ecfd, #b200fd);
+	width: 60%;
+	position: relative;
+	z-index: 4;
+	margin-bottom: 2rem;
+}
+
+.shopkeep__info-block--wrapper {
+	display: flex;
+	flex-direction: row;
+	font-size: 1.3rem;
+	margin-bottom: 4rem;
+}
+
+.shopkeep__info-block__shopName {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 3rem;
+}
+
+.shopkeep__info-block__pcBlock,
+.shopkeep__info-block__dmBlock {
+	display: inline-block;
+	background-color: #fff;
+	border-radius: 10%;
+	padding: 0.5rem 2rem;
+	margin-right: 2rem;
+}
+
+.shopkeep__info-block--spacer {
+	margin-right: 10rem;
+	width: 100%;
+}
+
+.shopkeep__info-block__pcBlock--npc-name,
+.shopkeep__info-block__pcBlock--npc-desc,
+.shopkeep_info-block__pcBlock--npc-alignment,
+.shopkeep__info-block__dmBlock--description,
+.shopkeep__info-block__dmBlock--score {
+	margin-bottom: 0.8rem;
+}
+
+/* Logo & Imagery Styles*/
+
+.shopkeep__info-block__logo--wrapper {
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+}
+
+.shopkeep__info-block__logo {
+	position: absolute;
+	top: -3%;
+	right: -2%;
+	border-radius: 100%;
+	max-height: 105%;
+	max-width: 105%;
+	z-index: 2;
+	object-fit: cover;
+	box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.5);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.shopkeep__infoblock__logo--svg-icon {
+	fill: #fff;
+	z-index: 3;
+	position: absolute;
+	top: 3rem;
+	right: -18.5rem;
+	height: 70%;
+	width: 70%;
+	filter: drop-shadow(0px 4px 4px rgba(0, 236, 253, 0.9));
+}

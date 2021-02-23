@@ -17,9 +17,9 @@ export default function SignUpForm() {
 	};
 
 	return (
-		<div className="form__container">
-			<form onSubmit={onSubmit} className="form">
-				<label className="form__label">
+		<div className="navbar__form--container">
+			<form onSubmit={onSubmit} className="navbar__form">
+				<label className="navbar__form--label">
 					Username:
 					<input
 						name="username"
@@ -27,11 +27,11 @@ export default function SignUpForm() {
 						placeholder="Enter your username"
 						value={formValues.username}
 						onChange={onChange}
-						className="form__input"
+						className="navbar__form--input"
 					/>
 				</label>
 
-				<label className="form__label">
+				<label className="navbar__form--label">
 					Password:
 					<input
 						name="password"
@@ -39,7 +39,7 @@ export default function SignUpForm() {
 						placeholder="Enter your password"
 						value={formValues.password}
 						onChange={onChange}
-						className="form__input"
+						className="navbar__form--input"
 					/>
 				</label>
 			</form>

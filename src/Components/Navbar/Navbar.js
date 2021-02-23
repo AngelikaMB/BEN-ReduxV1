@@ -19,6 +19,9 @@ export default function Navbar() {
 				<NavLink to="/donate" className="navbar__link">
 					Donate
 				</NavLink>
+				<NavLink to="/settings" className="navbar__link">
+					Settings
+				</NavLink>
 				<NavLink to="/about" className="navbar__link">
 					About
 				</NavLink>

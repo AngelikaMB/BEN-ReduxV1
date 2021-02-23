@@ -1,0 +1,25 @@
+.about__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 4rem;
+	font-size: 1.5rem;
+}
+
+.about__internal-wrapper {
+	margin: 2rem;
+}
+
+.about_container--title,
+.about__internal-wrapper__biography--title,
+.about__internal-wrapper__credits--title {
+	color: #b200fd;
+}
+
+.about__internal-wrapper__biography--title,
+.about__internal-wrapper__biography--paragraph,
+.about__internal-wrapper__credits--title,
+.about__internal-wrapper__credits--paragraph {
+	margin: 2rem 0;
+}

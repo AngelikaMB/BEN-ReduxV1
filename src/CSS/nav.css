@@ -3,13 +3,15 @@
 	justify-content: space-between;
 	align-items: center;
 	background-color: #343434;
+	padding: 1rem 2rem;
+	width: 100%;
 }
 
 .navbar__link {
-	font-size: 1.1rem;
+	font-size: 1.4rem;
 	text-decoration: none;
 	color: #00ecfd;
-	margin: 1rem;
+	margin: 2rem;
 	border-bottom: 0.2rem solid #343434;
 }
 
@@ -21,54 +23,51 @@
 }
 
 .navbar__links--container {
-	justify-content: center;
-	align-items: center;
 	padding: 0 1rem;
-	margin-right: 2rem;
 }
 
 .navbar__btn {
-	font-size: 0.8rem;
-	margin: 0.4rem;
-	padding: 0.8rem;
+	font-size: 1.2rem;
+	margin: 1rem;
+	padding: 1.3rem;
 	background-color: #fff;
 	color: #000;
 	border-radius: 1rem;
 }
 
-.form {
+.navbar__form {
 	display: flex;
 }
 
-.form__container {
+.navbar__form--container {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
 
-.form__label {
+.navbar__form--label {
 	display: flex;
 	flex-direction: column;
-	font-size: 0.9rem;
+	font-size: 1.4rem;
 	color: #00ecfd;
 	margin: 0.5rem;
 }
 
-.form__input {
+.navbar__form--input {
 	display: flex;
 	text-align: center;
 	background-color: #fff;
 	color: #000;
-	font-size: 1.1rem;
+	font-size: 1.6rem;
 	border: none;
 	border-radius: 0.5rem;
-	padding: 0.4rem 0;
+	padding: 1rem 0;
 }
 
-.form__input::placeholder {
+.navbar__form--input::placeholder {
 	opacity: 0.6;
-	font-size: 0.9rem;
+	font-size: 1.2rem;
 }
 
 /* Animations */
